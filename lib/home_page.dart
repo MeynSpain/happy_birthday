@@ -134,8 +134,8 @@ class _HomePageState extends State<HomePage>
   Future<void> _play() async {
     _timer?.cancel();
 
-    // await _audioPlayer.play(AssetSource('confetti_sound.mp3'));
     await _audioPlayer.play(AssetSource('confetti_sound.mp3'));
+    // await _audioPlayer.play(UrlSource('assets/sounds/confetti_sound.mp3'));
 
     setState(() {
       _isButtonPulsing = false;
@@ -190,7 +190,7 @@ class _HomePageState extends State<HomePage>
               children: [
                 // Expanded(child: SizedBox()),
                 Text(
-                  'С днем рождения, писька!',
+                  'С Днем рождения, писька!',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 36,
