@@ -185,62 +185,68 @@ class _HomePageState extends State<HomePage>
           // Align(alignment: Alignment.center,
           // child: Image.asset('assets/images/cake.png'),),
           Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+            child: ListView(
               children: [
-                // Expanded(child: SizedBox()),
-                Text(
-                  'С Днем рождения, писька!',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 36,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                    shadows: [
-                      Shadow(color: Colors.black, offset: Offset(1, 1)),
-                    ],
-                  ),
-                ),
-                Image.asset('assets/images/cake.png'),
-                // Expanded(child: SizedBox()),
-                Padding(
-                  padding: EdgeInsets.only(bottom: 20),
-                  child: AnimatedBuilder(
-                    animation: _buttonAnimationController,
-                    builder: (context, child) {
-                      return Transform.scale(
-                        scale: 1.0 + (_buttonAnimationController.value * 0.1),
-                        child: ElevatedButton(
-                          onPressed: _play,
-                          style: ElevatedButton.styleFrom(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 30,
-                              vertical: 15,
-                            ),
-                            backgroundColor: Colors.pink[200],
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30),
-                            ),
-                          ),
-                          child: const Text(
-                            'Нажми на меня',
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.white,
-                              shadows: [
-                                Shadow(
-                                  color: Colors.black,
-                                  offset: Offset(0.5, 0.5),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    SizedBox(height: 30,),
+                    // Expanded(child: SizedBox()),
+                    Text(
+                      'С Днем рождения, писька!',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 36,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        shadows: [
+                          Shadow(color: Colors.black, offset: Offset(1, 1)),
+                        ],
+                      ),
+                    ),
+                    Image.asset('assets/images/cake.png', height: 500),
+                    // Expanded(child: SizedBox()),
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 50),
+                      child: AnimatedBuilder(
+                        animation: _buttonAnimationController,
+                        builder: (context, child) {
+                          return Transform.scale(
+                            scale:
+                                1.0 + (_buttonAnimationController.value * 0.1),
+                            child: ElevatedButton(
+                              onPressed: _play,
+                              style: ElevatedButton.styleFrom(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 30,
+                                  vertical: 15,
                                 ),
-                              ],
+                                backgroundColor: Colors.pink[200],
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                              ),
+                              child: const Text(
+                                'Нажми на меня',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  color: Colors.white,
+                                  shadows: [
+                                    Shadow(
+                                      color: Colors.black,
+                                      offset: Offset(0.5, 0.5),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ),
-                          ),
-                        ),
-                      );
-                    },
-                  ),
+                          );
+                        },
+                      ),
+                    ),
+                    // SizedBox(height: 20,)
+                  ],
                 ),
-                // SizedBox(height: 20,)
               ],
             ),
           ),
