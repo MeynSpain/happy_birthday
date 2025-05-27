@@ -193,7 +193,7 @@ class _HomePageState extends State<HomePage>
                     SizedBox(height: 30,),
                     // Expanded(child: SizedBox()),
                     Text(
-                      'С Днем рождения, писька!',
+                      'С Днем рождения!',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 36,
